@@ -1,14 +1,7 @@
-const express = require('express');
-const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 8080;
-const app = express();
 const PASSWORD = process.env.PASSWORD;
 const nodemailer = require('nodemailer');
 
 const contactController = () => { };
-
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const fromEmail = 'nhrboka@aol.com';
 const toEmail = 'nicholashrboka@gmail.com';
@@ -21,11 +14,13 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-contactController.sendEmail = (req, res) => {
+contactController.sendEmail = (req, res, next) => {
+
 	res.set({
       'Access-Control-Allow-Origin': '*'
     })
     req.headers['Access-Control-Allow-Origin'] = '*'
+    console.log(req.body)
     let email = req.body.email;
     let coName = req.body.coname;
     let phone = req.body.phone;
@@ -40,22 +35,25 @@ contactController.sendEmail = (req, res) => {
                 EMAIL: ${email}\n
                 \n
                 ${message}`;
+    console.log(body)
 
     // const from = name && email ? `${name} <${email}>` : `${name || email}`
     const mailOptions = {
         from: fromEmail,
         to: toEmail,
         subject: subject,
-        body
+        text: body
     };
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
             console.log(error);
-            res.json({response: 'error'});
+            // res.json({response: 'error'});
+            res.redirect('back');
         }else{
             console.log('Message sent: ' + info.response);
-            res.json({response: info.response});
+            // res.json({response: info.response});
+            res.redirect('back');
         };
     });
 

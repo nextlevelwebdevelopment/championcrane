@@ -69,7 +69,7 @@
 <!-- InstanceBeginEditable name="banner" -->
 <div class="banner-container">
 	<div class="equipment-banner">
-		<h2>Equipment</h2>
+		<h2>Contact</h2>
 	</div>
 </div>
 <!-- InstanceEndEditable -->
@@ -87,27 +87,27 @@
 
 <div class="contact-form">
 
-<form class="contact" method="post" action="/api/contact">
+<form class="contact" method="post" action="/api/contact" role="form">
 
 <div class="label-container"><label class="contact-label" for="fname">First Name</label></div>
-<div class="textbox-contaniner"><input class="contact-textbox" id="fname" name="fname" type="text" placeholder="Ex. John"/></div>
+<div class="textbox-contaniner"><input class="contact-textbox form-control" id="fname" name="fname" type="text" placeholder="Ex. John"/></div>
 
 <div class="label-container"><label class="contact-label" for="lname">Last Name</label></div>
-<div class="textbox-contaniner"><input class="contact-textbox" id="lname" name="lname" type="text" placeholder="Ex. Smith"/></div>
+<div class="textbox-contaniner"><input class="contact-textbox form-control" id="lname" name="lname" type="text" placeholder="Ex. Smith"/></div>
 
 <div class="label-container"><label class="contact-label" for="coname">Company Name</label></div>
-<div class="textbox-contaniner"><input class="contact-textbox" id="coname" name="coname" type="text" placeholder="Your Company"/></div>
+<div class="textbox-contaniner"><input class="contact-textbox form-control" id="coname" name="coname" type="text" placeholder="Your Company"/></div>
 
 <div class="label-container"><label class="contact-label" for="phone">Phone Number</label></div>
-<div class="textbox-contaniner"><input class="contact-textbox" id="phone" name="phone" type="text" placeholder="800-555-0123"/></div>
+<div class="textbox-contaniner"><input class="contact-textbox form-control" id="phone" name="phone" type="text" placeholder="800-555-0123"/></div>
 
 <div class="label-container"><label class="contact-label" for="email">Email Address</label></div>
-<div class="textbox-contaniner"><input class="contact-textbox" id="email" name="email" type="text" placeholder="someone@example.com"/></div>
+<div class="textbox-contaniner"><input class="contact-textbox form-control" id="email" name="email" type="text" placeholder="someone@example.com"/></div>
 
 <div class="label-container"><label class="contact-label" for="message">Message</label></div>
-<div class="message-contaniner"><textarea class="contact-message" id="message" name="message" placeholder="Write Something..."></textarea></div>
+<div class="message-contaniner"><textarea class="contact-message form-control" id="message" name="message" placeholder="Write Something..."></textarea></div>
 
-<input class="contact-button" type="submit" value="Send Message"/>
+<input class="contact-button" type="submit" name="submit" value="Send Message"/>
 
 </form>
 
