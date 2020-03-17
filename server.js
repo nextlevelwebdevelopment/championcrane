@@ -7,12 +7,14 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
+const api = require('./api/routes');
 
 app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
 app.use('/', index);
+app.use('/api', api);
 
 app.listen(PORT, () => {
     console.log('Server is running on port ' + PORT);
