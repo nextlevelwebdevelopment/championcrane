@@ -29,12 +29,7 @@ contactController.sendEmail = (req, res, next) => {
     let message = req.body.message;
     let subject = 'Champion Crane Website Contact Form';
 
-    let body = `FROM: ${fName} ${lName}\n
-                COMPANY: ${coName}\n
-                PHONE#: ${phone}\n
-                EMAIL: ${email}\n
-                \n
-                ${message}`;
+    let body = `FROM: ${fName} ${lName}\nCOMPANY: ${coName}\nPHONE#: ${phone}\nEMAIL: ${email}\n\n${message}`;
     console.log(body)
 
     // const from = name && email ? `${name} <${email}>` : `${name || email}`
