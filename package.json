@@ -1,0 +1,28 @@
+{
+  "name": "championcrane",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextlevelwebdevelopment/championcrane.git"
+  },
+  "author": "boka44",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nextlevelwebdevelopment/championcrane/issues"
+  },
+  "homepage": "https://github.com/nextlevelwebdevelopment/championcrane#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.5",
+    "path": "^0.12.7"
+  }
+}
