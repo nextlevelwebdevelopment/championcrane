@@ -26,17 +26,27 @@ contactController.sendEmail = (req, res) => {
       'Access-Control-Allow-Origin': '*'
     })
     req.headers['Access-Control-Allow-Origin'] = '*'
-	let email = req.body.email;
-	let name = req.body.name;
-    let text = req.body.text;
-    let subject = req.body.subject;
+    let email = req.body.email;
+    let coName = req.body.coname;
+    let phone = req.body.phone;
+    let fName = req.body.fname;
+    let lName = req.body.lname;
+    let message = req.body.message;
+    let subject = 'Champion Crane Website Contact Form';
+
+    let body = `FROM: ${fName} ${lName}\n
+                COMPANY: ${coName}\n
+                PHONE#: ${phone}\n
+                EMAIL: ${email}\n
+                \n
+                ${message}`;
 
     // const from = name && email ? `${name} <${email}>` : `${name || email}`
     const mailOptions = {
         from: fromEmail,
         to: toEmail,
         subject: subject,
-        text
+        body
     };
 
     transporter.sendMail(mailOptions, function(error, info){
