@@ -7,10 +7,10 @@
 <title>Champion Crane</title>
 <!-- InstanceEndEditable -->
 <link type="text/css" rel="stylesheet" href="css/style.css" />
-<style><!--[if lt IE 9]>
+<!-- <style><!--[if lt IE 9]>
    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
    <![endif]--></style>
-</head>
+</head> -->
 
 <body class="no-touch">
 
@@ -151,6 +151,23 @@ $(function(){
          $(this).closest('.boxInner').toggleClass('touchFocus');
       });
    }
+   // Here we handle form POST request to stay on the same page and submit a simple message on success
+   var $form = $('form');
+   $form.submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), function(response){
+			if(response.success == true) {
+				let formLength = $form[0].elements.length;
+				for(i = 0; i < formLength; i++) {
+					if(i < formLength - 1) {
+						$form[0].elements[i].value = '';
+					} else {
+						$form[0].elements[i].value = 'Submitted!';
+					}
+				}
+			}
+      },'json');
+      return false;
+   });
 });
 </script>
 </body>
