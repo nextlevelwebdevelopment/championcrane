@@ -676,6 +676,9 @@ footer p {
 }
 
 @media (min-width : 1200px){
+	.gallery-content {
+		width: 1150px !important;
+	}
 	nav {
 		margin-left: 100px;
 	}
