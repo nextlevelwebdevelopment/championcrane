@@ -3,8 +3,8 @@ const nodemailer = require('nodemailer');
 
 const contactController = () => { };
 
-const fromEmail = 'nhrboka@aol.com';
-const toEmail = 'nicholashrboka@gmail.com';
+const fromEmail = process.env.fromEmail;
+const toEmail = process.env.toEmail;
 
 const transporter = nodemailer.createTransport({
   service: 'AOL',
