@@ -11,10 +11,10 @@ As for the contact form, NodeMailer is the easiest and most popular free mailing
 2. Create a .env file in the root directory.
 3. Likely the only code you will have to write is in that file. If thhere are issues, consult the docs mentioned earlier and feel free to contact [me](https://github.com/Boka44 "Boka"). Write the code like below:
 
-``
+```
 PASSWORD=example1234
 toEmail=example@aol.com
 fromEmail=example@gmail.com
-``
+```
 
 > Note: IF you have any questions reach out to me.
