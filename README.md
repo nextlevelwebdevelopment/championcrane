@@ -5,7 +5,7 @@
 We are using dotenv, a library that  allows a .env file to store environment variables (aka anything private like passwords, api keys, etc...).
 As for the contact form, NodeMailer is the easiest and most popular free mailing library with node. We use it by using an email account you already have to send the email.
 
-##### Here are the steps below to set it up for testing
+#### Here are the steps below to set it up for testing
 
 1. Depending on the email account you use, be sure to check the NodeMailer docs [here](https://nodemailer.com/about/ "Nodemailer").
 2. Create a .env file in the root directory.
