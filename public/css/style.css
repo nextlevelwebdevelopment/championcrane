@@ -37,7 +37,7 @@ ul {
 	background-color:#FF0004;
 	text-decoration: none;
 }
-.header-phone a, .header-phone:active, .header-phone:visited {
+.header-phone a, .header-phone:active, .header-phone:visited, .header-phone a:hover, .header-phone:hover {
 	color: #fff;
 	text-decoration: none;
 }
@@ -50,6 +50,7 @@ ul {
 	padding-top:2px;
 	border: 1px solid #FF0004;
 	background-color: #fff;
+	text-decoration: none;
 }
 .header-address {
 	float:right;
@@ -72,6 +73,7 @@ nav {
   float:right;
   margin-top:32px;
   margin-bottom: 0px;
+	text-decoration: none;
 }
 
 nav:after {
@@ -84,12 +86,14 @@ nav ul {
   padding:0px;
   margin:0px;
   list-style:none;
+	text-decoration: none;
 }
 
 nav ul li {
   margin:0px;
   display:inline-block;
   float:left;
+  text-decoration: none;
 }
 
 nav li a {
@@ -106,6 +110,10 @@ nav li a {
   -webkit-transition:background-color .5s, color .5s;
   -moz-transition:background-color .5s, color .5s;
   -o-transition:background-color .5s, color .5s;
+}
+
+nav li a:hover {
+	text-decoration: none;
 }
 
 .dropdown ul {
@@ -409,6 +417,7 @@ nav li a {
 }
 .eqNav-notcurrent:hover {
 	background-color: #BEBEBE;
+	color: #333;
 }
 .eqNav-current {
 	background-color: #0201A4;
@@ -1114,6 +1123,10 @@ footer p {
 
 .gallery div div a :hover{
 	opacity: .8;
+}
+
+.gallery div div img {
+	margin-bottom: 20px;
 }
 
 
