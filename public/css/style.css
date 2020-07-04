@@ -1117,11 +1117,14 @@ footer p {
 }
 
 .gallery div div a {
-	transition: opacity 2s ease-in-out; /* transition property not working for some reason, can address if there is time */
-	opacity: 1;
+	opacity:1;
+	transition: opacity 0.5s;
+	-webkit-transition:opacity 0.5s;
+	-moz-transition:opacity 0.5s;
+	-o-transition:opacity 0.5s;
 }
 
-.gallery div div a :hover{
+.gallery div div a:hover{
 	opacity: .8;
 }
 
