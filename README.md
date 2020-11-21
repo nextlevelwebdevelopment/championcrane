@@ -12,9 +12,9 @@ As for the contact form, NodeMailer is the easiest and most popular free mailing
 3. Likely the only code you will have to write is in that file. If there are issues, consult the docs mentioned earlier and feel free to contact [me](https://github.com/Boka44 "Boka"). Write the code like below:
 
 ```
-PASSWORD=example1234
-toEmail=example@aol.com
-fromEmail=example@gmail.com
+PASSWORD='example1234'
+toEmail='example@aol.com'
+fromEmail='example@gmail.com'
 ```
 
 > Note: IF you have any questions reach out to me.
